@@ -1,0 +1,78 @@
+    <section id="newsletter">
+        <div class="container">
+            {{#if sessionFlash.message}}
+                <h1 class={{sessionFlash.type}}>{{sessionFlash.message}}</h>
+            {{else}}
+                <h1 id="messageseach">All Post</h>
+            {{/if}}
+            <!-- <form>
+                <input type="email", placeholder="enter email">
+                <button type="submit"  class="button_1" >Subscribe</button>
+            </form> -->
+        </div>
+    </section>
+
+
+    <section id="newsletter">
+        <div id="search-box">
+            <div id="search-div">
+                <form id="searcherform" action="">
+
+                    <input id="searchinpt" type="text">
+                    <button id="searchbtn" type="submit"><i id="search-icon" class="fas fa-search"></i></button>
+                    <select name="search-catagories" id="search-catagories">
+                        <option value="all" selected>All Posts</option>
+                        {{#each categories}}
+                           
+                            <option value="{{_id}}">{{name}}</option>
+                        {{/each}}
+                    </select>
+
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <ul id="allcases">
+        {{#each posts}}
+        <li class="card">
+            <div class="imgbox">
+                <img src="{{post_image}}">
+            </div>
+            <div class="content">
+                <div class="title"><h2>{{title}}</h2></div>
+                <div class="sub-title"> Point to get more information</div>
+                <div class="bottom">
+
+                    <div class="info-case-box">
+
+                        <div class="case-info">
+                            <h3>ImgType</h3>
+                            <p>
+                                {{imagingtype}}
+                            </p>
+                        </div>
+                        <div class="case-info ">
+                            <h3>Poster</h3>
+                            <p>
+                                {{author.username}}
+                            </p>
+                        </div>
+                        <div  class="case-info categoriesof">
+                            <h3>Tani</h3>
+                            <p>
+                                {{category.name}}
+                            </p>
+                        </div>
+                    </div>   
+                </div>
+                <a class='readmore' href="/posts/{{_id}}">Read More</a>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+
+    <script src="/js/UIsearcher.js"></script>
+    <script src="/js/searcher.js"></script>
+    
+    

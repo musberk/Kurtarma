@@ -1,0 +1,101 @@
+
+    <section id="newsletter">
+        <div class="container">
+            <h1>Update The Post</h>
+            <!-- <form>
+                <input type="email", placeholder="enter email">
+                <button type="submit"  class="button_1" >Subscribe</button>
+            </form> -->
+        </div>
+    </section>
+    
+    {{!-- <div class="contact-form">
+        <form id="post-form" action="/admin/posts/{{post.id}}?_method=PUT" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_method" value="PUT">
+            <div class="form-container">
+                <div class="input-fields">
+                    <input type="text" class="inpt" name="title" value="{{post.title}}" required="required">
+                    <input type="text" class="inpt" name="imagingtype" value="{{post.imagingtype}}" required="required">
+                    <select name="category" id="" required="required">
+                        {{#each categories}}
+                            <option value="{{_id}}">{{name}}</option>
+                        {{/each}}
+                    </select>
+                    <input type="text" class="inpt" name="gender" value="{{post.gender}}">
+                    <input type="text" class="inpt" name="age" value="{{post.age}}">
+                    <input type="file" name="post_image" class="inpt" required="required">
+                </div>
+            
+                <div class="mgs-btn">
+                    <textarea name="desc"  cols="30" rows="5" placeholder="Description">{{post.desc}}</textarea>
+                    
+                    <button type="submit" id="posterbtn">Update Post</button>
+                    
+                </div>
+                
+            </div> 
+        </form>
+    </div> --}}
+
+
+
+    <div class="login-box-1">
+            <h2>Update The Post</h2>
+            <form id="posterpost"  action="/admin/posts/{{post.id}}?_method=PUT" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="_method" value="PUT">
+                <div class="left-partinpt">
+                    <div class="user-box-1">
+        
+                        <input type="text" name="title" value="{{post.title}}" required="required">
+                        <label>Title</label>
+        
+                    </div>
+        
+                    <div class="user-box-1">
+
+                        <label>Imaging type</label>
+                        <select id="option" name="imagingtype" >
+                            <option value="X-ray">X-ray</option>
+                            <option value="CT">CT</option>
+                        </select>
+        
+                    </div>
+                    <div class="user-box-1">
+        
+                        <label for="option">Diagnosis</label>
+                        <select name="category" id="option">
+                            {{#each categories}}
+                            <option value="{{_id}}">{{name}}</option>
+                            {{/each}}
+                        </select>
+        
+                    </div>
+                    <div class="user-box-1">
+                        <label>Gender</label>
+                        <select name="gender" id="option">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+        
+                    </div>
+                    <div class="user-box-1">
+        
+                        <input type="text" name="age" autocomplete="off" value="{{post.age}}">
+                        <label>Age</label>
+        
+                    </div>
+                    <div>
+        
+                        <input type="file" id="filesender" name="post_image" accept="image/x-png,image/gif,image/jpeg"/>
+                        
+                    </div>
+                </div>
+                <div class="right-partinpt">
+                    
+                    <textarea id="post-area" name="desc"  cols="30" rows="5" placeholder="Description">{{post.desc}}</textarea>
+                    <button type="submit" id="posterbtn" style="border: 0; background-color: #1D2E44; border-radius: 10px;">
+                        Send Post
+                    </button>
+                </div>    
+            </form>
+        </div>

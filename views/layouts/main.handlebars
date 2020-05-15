@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Mustafa">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet"  href="/css/style.css">
+</head>
+<body>
+   
+    <header>
+        <div class="container">
+           <div id="branding">
+               <h1> <span class="highlight">Dec</span> X-ray</h1>
+           </div> 
+           <nav>
+               <ul>
+                    <li>
+                       <a href="/">Home</a>
+                    </li>
+                    <li>
+                       <a href="/about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="/cases">Cases</a>
+                    </li>
+                    {{#if displayLink}}
+                    <li>
+                       <a href="/admin">Admin</a>
+                    </li>
+                    
+                    <li>
+                        <a class="menubar-item-5" href="/posts/new">AddCase</a>
+                    </li>
+                    {{/if}}
+                    {{#unless displayLink}}
+                    <li>
+                        <a href="/users/register">Register</a>
+                    </li>
+                    <li>
+                        <a href="/users/login">Loing</a>
+                    </li>
+                   {{/unless}}
+                    {{#if displayLink}}
+                    <li>
+                        <a href="/users/logout">Logout</a>
+                    </li>
+                    {{/if}}  
+               </ul>
+           </nav>
+        </div>
+    </header>
+
+    {{{body}}}
+
+
+    <footer>
+        <p>
+            Mustafa Berk Keles, Copyright &copy; 2020
+        </p>
+    </footer>
+
+  
+    
+
+</body>
+</html>

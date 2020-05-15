@@ -1,0 +1,51 @@
+
+    <section id="newsletter">
+        <div class="container">
+            <h1>Admin</h>
+            <!-- <form>
+                <input type="email", placeholder="enter email">
+                <button type="submit"  class="button_1" >Subscribe</button>
+            </form> -->
+        </div>
+    </section>
+
+    <div class="adimin-container">
+        {{>admin-nav}}
+    </div>
+
+    <div class="sec-table">
+        
+            
+        <form  id="catgaddform" action="" method="POST">
+            <label for="name">Category</label>
+            <input type="text" name="name" />
+            
+            <button type="submit"><i class="fas fa-plus-square"></i></button>
+        </form>
+            
+        
+    
+        <table>
+            <thead>
+                <th>id</th>
+                <th>Name</th>
+                <th>Delete</th>
+            </thead>
+            <tbody>
+                {{#each categories}}
+                <tr>
+                    <td id="idcat">{{id}}</td>
+                    <td>{{name}}</td>
+                    <td>
+                        <form action="/admin/categories/{{id}}?_method=DELETE" method="POST">
+                            <input type="hidden" name="_method" value=DELETE/>
+                            <button type="submit"><i class="fas fa-toilet"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        
+    </div>
+    

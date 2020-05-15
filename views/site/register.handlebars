@@ -1,0 +1,86 @@
+    <section id="newsletter">
+        <div class="container">
+            {{#if sessionFlash.message}}
+                <h1 class={{sessionFlash.type}}>{{sessionFlash.message}}</h>
+            {{else}}
+                <h1>Regiester to Dec X-Ray</h>
+            {{/if}}
+            <!-- <form>
+                <input type="email", placeholder="enter email">
+                <button type="submit"  class="button_1" >Subscribe</button>
+            </form> -->
+        </div>
+    </section>
+    
+    
+    {{!-- <div class="contact-form">
+        <form id="post-form" action="/users/register" method="POST" enctype="multipart/form-data">
+            <div class="form-container">
+                <div class="input-fields">
+                    <input type="text" class="inpt" name="username" placeholder="UserName" required="required">
+                    <input type="email" class="inpt" name="email" placeholder="Email" required="required">
+                    <input type="password" class="inpt" name="password" placeholder="PassWord" required="required">
+                    <input type="text" class="inpt" name="title" placeholder="your title like Dr">
+                    <input type="text" class="inpt" name="place" placeholder="place">
+                    <input type="text" name="contact_url" class="inpt" placeholder="contactUrl">
+                    <button type="submit" id="posterbtn">Send Post</button>
+                </div>   
+            </div> 
+        </form>
+    </div> --}}
+
+
+    <div class="login-box">
+        <h2>Register</h2>
+        <form action="/users/register" method="POST">
+
+            <div class="user-box">
+
+                <input type="text" name="username" required="required" autocomplete="off">
+                <label>Name</label>
+
+            </div>
+
+            <div class="user-box">
+
+                <input type="email" name="email" required="required" autocomplete="off">
+                <label>E-mail</label>
+
+            </div>
+
+            <div class="user-box">
+
+                <input type="password" name="password"  autocomplete="off">
+                <label>Password</label>
+
+            </div>
+
+            <div class="user-box">
+
+                <input type="text" name="title" autocomplete="off">
+                <label>Title</label>
+
+            </div>
+            <div class="user-box">
+
+                <input type="text" name="contact_url" autocomplete="off">
+                <label>Contact Url</label>
+
+            </div>
+            <div class="user-box">
+
+                <input type="text"  name="place" autocomplete="off">
+                <label>Place</label>
+
+            </div>
+            <button class="register-login-button" type="submit" >
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Register
+            </button>
+
+        </form>
+    </div>

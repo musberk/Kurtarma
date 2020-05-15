@@ -1,0 +1,51 @@
+<div class="backgrd">
+
+        <section id="newsletter">
+            <div class="container">
+                <h1>The Post</h>
+                <!-- <form>
+                    <input type="email", placeholder="enter email">
+                    <button type="submit"  class="button_1" >Subscribe</button>
+                </form> -->
+            </div>
+        </section>
+        <div class="post-fully">
+            <div class="post-img">
+                <img src="{{post.post_image}}" alt="">
+
+            </div>
+
+            <div class="info-container">
+                <div class="img-info">
+                    <h3>Title:<span>{{post.title}}</span></h1>
+                </div>
+                <div class="img-info">
+                    <h3>Imaging Type:<span>{{post.imagingtype}}</span></h1>
+                </div>
+                <div class="img-info">
+                    <h3>diag:<span>{{post.category.name}}</span></h1>
+                </div>
+                <div class="img-info">
+                    <h3>Gender:<span>{{post.gender}}</span></h1>
+                </div>
+                <div class="img-info">
+                    <h3>Age:<span>{{post.age}}</span></h1>
+                </div>
+                <div class="img-info">
+                    <h3>author:<span>{{post.author.username}}</span></h1>
+                </div>
+                <div class="img-info">
+                    <h3>PostedDate:<span>{{generateDate post.postdate "MMM DD YYYY"}}</span></h1>
+                </div>
+            </div>
+            
+            <div class="des-info">
+                <h3>Description</h1>
+                <br/>
+                <p>
+                    {{post.desc}}
+                </p>
+            </div>
+            
+        </div>
+    </div>

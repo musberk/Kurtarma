@@ -1,0 +1,98 @@
+
+    <section id="newsletter">
+        <div class="container">
+            <h1>SEND A POST AND MAKE CONTROBITION</h>
+            <!-- <form>
+                <input type="email", placeholder="enter email">
+                <button type="submit"  class="button_1" >Subscribe</button>
+            </form> -->
+        </div>
+    </section>
+    
+    {{!-- <div class="contact-form">
+        <form id="post-form" action="/posts/test" method="POST" enctype="multipart/form-data">
+            <div class="form-container">
+                <div class="input-fields">
+                    <input type="text" class="inpt" name="title" placeholder="Title" required="required">
+                    <input type="text" class="inpt" name="imagingtype" placeholder="Imaging type" required="required">
+                    <select name="category" id="" required="required">
+                        {{#each categories}}
+                            <option value="{{_id}}">{{name}}</option>
+                        {{/each}}
+                    </select>
+                    <input type="text" class="inpt" name="gender" placeholder="gender">
+                    <input type="text" class="inpt" name="age" placeholder="age">
+                    <input type="file" name="post_image" class="inpt" required="required">
+                </div>
+            
+                <div class="mgs-btn">
+                    <textarea name="desc"  cols="30" rows="5" placeholder="Description"></textarea>
+                    
+                    <button type="submit" id="posterbtn">Send Post</button>
+                    
+                </div>
+                
+            </div> 
+        </form>
+    </div> --}}
+
+
+    <div class="login-box-1">
+            <h2>Send Post</h2>
+            <form id="posterpost" action="/posts/test" method="POST" enctype="multipart/form-data">
+                <div class="left-partinpt">
+                    <div class="user-box-1">
+        
+                        <input type="text" name="title" required="required" autocomplete="off">
+                        <label>Title</label>
+        
+                    </div>
+        
+                    <div class="user-box-1">
+
+                        <label>Imaging type</label>
+                        <select id="option" name="imagingtype" >
+                            <option value="X-ray">X-ray</option>
+                            <option value="CT">CT</option>
+                        </select>
+        
+                    </div>
+                    <div class="user-box-1">
+        
+                        <label for="option">Diagnosis</label>
+                        <select name="category" id="option">
+                            {{#each categories}}
+                            <option value="{{_id}}">{{name}}</option>
+                            {{/each}}
+                        </select>
+        
+                    </div>
+                    <div class="user-box-1">
+                        <label>Gender</label>
+                        <select name="gender" id="option">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+        
+                    </div>
+                    <div class="user-box-1">
+        
+                        <input type="text" name="age" autocomplete="off">
+                        <label>Age</label>
+        
+                    </div>
+                    <div>
+        
+                        <input type="file" id="filesender" name="post_image" accept="image/x-png,image/gif,image/jpeg"/>
+                        
+                    </div>
+                </div>
+                <div class="right-partinpt">
+                    
+                    <textarea id="post-area" name="desc"  cols="30" rows="5" placeholder="Description"></textarea>
+                    <button type="submit" id="posterbtn" style="border: 0; background-color: #1D2E44; border-radius: 10px;">
+                        Send Post
+                    </button>
+                </div>    
+            </form>
+        </div>  
