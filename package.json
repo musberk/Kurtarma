@@ -23,7 +23,7 @@
     "filepond-plugin-image-resize": "^2.0.4",
     "install": "^0.13.0",
     "method-override": "^3.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "mongoose": "^5.9.10"
   },
   "devDependencies": {
